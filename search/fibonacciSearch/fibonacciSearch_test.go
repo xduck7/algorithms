@@ -1,0 +1,3 @@
+package fibonacciSearch
+
+// TODO: algorithm

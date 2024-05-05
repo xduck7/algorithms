@@ -1,0 +1,3 @@
+package ternarySearch
+
+// TODO: algorithm

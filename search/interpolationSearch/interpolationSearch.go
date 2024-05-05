@@ -1,0 +1,3 @@
+package interpolationSearch
+
+// TODO: algorithm

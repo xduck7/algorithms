@@ -1,0 +1,3 @@
+package jumpSearch
+
+// TODO: algorithm
