@@ -1,9 +1,9 @@
 package linearSearch
 
-func linearSearch(sortedList []int, target int) bool {
+func linearSearch(sortedArray []int, target int) bool {
 
-	for i := range sortedList {
-		if sortedList[i] == target {
+	for i := range sortedArray {
+		if sortedArray[i] == target {
 			return true
 		}
 	}

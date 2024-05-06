@@ -4,17 +4,17 @@ import (
 	"math"
 )
 
-func jumpSearch(sortedList []int, target int) bool {
-	step := int(math.Sqrt(float64(len(sortedList))))
-	length := len(sortedList)
-	start := 0
-	end := step
-	for end < length && sortedList[end-1] < target {
-		start = end
-		end += step
+func jumpSearch(sortedArray []int, target int) bool {
+	step := int(math.Sqrt(float64(len(sortedArray))))
+	length := len(sortedArray)
+	left := 0
+	right := step
+	for right < length && sortedArray[right-1] < target {
+		left = right
+		right += step
 	}
-	for i := start; i < end-1; i++ {
-		if sortedList[i] == target {
+	for i := left; i < right-1; i++ {
+		if sortedArray[i] == target {
 			return true
 		}
 	}

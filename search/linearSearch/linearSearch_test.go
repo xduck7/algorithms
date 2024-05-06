@@ -11,12 +11,12 @@ func TestLinearSearch(t *testing.T) {
 		expected bool
 	}{
 		{
-			list:     []int{1, 2, 3, 4, 5},
-			target:   3,
+			list:     []int{1, 2, 3, 4, 5, 23, 34, 45, 56, 67, 69, 143, 336, 475, 575, 676},
+			target:   56,
 			expected: true,
 		},
 		{
-			list:     []int{1, 2, 3, 4, 5},
+			list:     []int{1, 2, 3, 4, 5, 23, 34, 45, 56, 67, 69, 143, 336, 475, 575, 676},
 			target:   6,
 			expected: false,
 		},
@@ -26,13 +26,13 @@ func TestLinearSearch(t *testing.T) {
 			expected: false,
 		},
 		{
-			list:     []int{1, 2, 3, 4, 5},
+			list:     []int{1, 2, 3, 4, 5, 23, 34, 45, 56, 67, 69, 143, 336, 475, 575, 676},
 			target:   1,
 			expected: true,
 		},
 		{
-			list:     []int{1, 2, 3, 4, 5},
-			target:   5,
+			list:     []int{1, 2, 3, 4, 5, 23, 34, 45, 56, 67, 69, 143, 336, 475, 575, 676},
+			target:   575,
 			expected: true,
 		},
 	}

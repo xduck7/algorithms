@@ -1,14 +1,14 @@
 package binarySearch
 
-func binarySearch(sortedList []int, target int) bool {
+func binarySearch(sortedArray []int, target int) bool {
 
 	left := 0
-	right := len(sortedList) - 1
+	right := len(sortedArray) - 1
 
 	for left <= right {
 
 		mid := (left + right) / 2
-		midElement := sortedList[mid]
+		midElement := sortedArray[mid]
 
 		if midElement == target {
 			return true
