@@ -12,7 +12,7 @@
 * &nbsp; [Linear Search](https://github.com/xduck7/algorithms/tree/main/search/linearSearch/linearSearch.go)
 * &nbsp; [Ternary Search](https://github.com/xduck7/algorithms/tree/main/search/ternarySearch/ternarySearch.go)
 
-### 🧹[Sort algorithms](https://github.com/xduck7/algorithms/tree/main/search)
+### 🧹[Sort algorithms](https://github.com/xduck7/algorithms/tree/main/sort)
 * &nbsp; [Bubble Sort](https://github.com/xduck7/algorithms/blob/main/sort/bubbleSort/bubbleSort.go)
 * &nbsp; [Heap Sort](https://github.com/xduck7/algorithms/blob/main/sort/heapSort/heapSort.go)
 * &nbsp; [Insertion Sort](https://github.com/xduck7/algorithms/blob/main/sort/insertionSort/insertionSort.go)
