@@ -1,4 +1,4 @@
-# algorithms
+# Algorithms
 ---
 
 ## List of algorithms
