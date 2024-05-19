@@ -19,3 +19,6 @@
 * &nbsp; [Merge Sort](https://github.com/xduck7/algorithms/blob/main/sort/mergeSort/mergeSort.go)
 * &nbsp; [Quick Sort](https://github.com/xduck7/algorithms/blob/main/sort/quickSort/quickSort.go)
 * &nbsp; [Selection Sort](https://github.com/xduck7/algorithms/blob/main/sort/selectionSort/selectionSort.go)
+
+### 📚[Graph algorithms](https://github.com/xduck7/algorithms/tree/main/graph)
+* &nbsp; [BFS](https://github.com/xduck7/algorithms/blob/main/graph/bfs/bfs.go)
