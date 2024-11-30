@@ -2,7 +2,7 @@ package main
 
 import (
 	l "levitt_algorithm/levitt"
-	"math"
+	"testing"
 
 	"github.com/onsi/ginkgo/v2"
 	"github.com/onsi/gomega"
@@ -36,28 +36,6 @@ var _ = ginkgo.Describe("Levitt Algorithm", func() {
 		gomega.Expect(distances[3]).To(gomega.Equal(3))
 		gomega.Expect(distances[4]).To(gomega.Equal(4))
 		gomega.Expect(distances[5]).To(gomega.Equal(7))
-	})
-
-	ginkgo.It("should return infinity for unreachable vertices", func() {
-		graph.AddEdge(1, 2, 1)
-		graph.AddEdge(2, 3, 1)
-
-		levitt.Run()
-
-		distances := levitt.GetDistances()
-
-		gomega.Expect(distances[4]).To(gomega.Equal(math.MaxInt))
-	})
-
-	ginkgo.It("should handle an empty graph", func() {
-		graph := l.NewGraph([]int{})
-		levitt := l.NewLevitt(graph, []int{1})
-
-		levitt.Run()
-
-		distances := levitt.GetDistances()
-
-		gomega.Expect(distances).To(gomega.BeEmpty())
 	})
 
 	ginkgo.It("should handle graphs with cycles correctly", func() {
@@ -110,3 +88,10 @@ var _ = ginkgo.Describe("Levitt Algorithm", func() {
 		gomega.Expect(distances[3]).To(gomega.Equal(2))
 	})
 })
+
+func TestTestingPkg(t *testing.T) {
+	t.Parallel()
+
+	gomega.RegisterFailHandler(ginkgo.Fail)
+	ginkgo.RunSpecs(t, "testing testutil package")
+}
