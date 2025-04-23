@@ -1,4 +1,4 @@
-package sliding_window
+package other_sliding_window
 
 import (
 	"fmt"

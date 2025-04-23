@@ -1,4 +1,4 @@
-package sliding_window
+package other_sliding_window
 
 func findLenOfUniqSubstring(s []rune) int64 {
 	if len(s) == 0 {
