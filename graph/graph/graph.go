@@ -1,15 +1,8 @@
 package graph
 
 type Vertex struct {
-	Key      int
-	Adjacent []*Vertex
-}
-
-type IGraph interface {
-	AddVertex(key int)
-	AddEdge(from, to int)
-	GetVertex(key int) *Vertex
-	ContainsVertex(key int) bool
+	Key  int
+	Near []*Vertex
 }
 
 type Graph struct {
@@ -27,7 +20,7 @@ func (g *Graph) AddEdge(from, to int) {
 	toVertex := g.GetVertex(to)
 
 	if fromVertex != nil && toVertex != nil {
-		fromVertex.Adjacent = append(fromVertex.Adjacent, toVertex)
+		fromVertex.Near = append(fromVertex.Near, toVertex)
 	}
 }
 

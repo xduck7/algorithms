@@ -1,66 +1,30 @@
-package bfs
+package bfs_test
 
 import (
+	"algotithms/contests/3_dfs_bfs/bfs"
 	"algotithms/graph/graph"
 	"testing"
 )
 
-type MockGraph struct {
-	Vertices map[int]*graph.Vertex
-}
-
-func NewMockGraph() *MockGraph {
-	return &MockGraph{Vertices: make(map[int]*graph.Vertex)}
-}
-
-func (g *MockGraph) AddVertex(key int) {
-	if _, exists := g.Vertices[key]; !exists {
-		g.Vertices[key] = &graph.Vertex{Key: key}
-	}
-}
-
-func (g *MockGraph) AddEdge(from, to int) {
-	fromVertex, fromExists := g.Vertices[from]
-	toVertex, toExists := g.Vertices[to]
-
-	if fromExists && toExists {
-		fromVertex.Adjacent = append(fromVertex.Adjacent, toVertex)
-	}
-}
-
-func (g *MockGraph) GetVertex(key int) *graph.Vertex {
-	return g.Vertices[key]
-}
-
-func (g *MockGraph) ContainsVertex(key int) bool {
-	for _, v := range g.Vertices {
-		if v.Key == key {
-			return true
-		}
-	}
-	return false
-}
-
 func TestBFS(t *testing.T) {
-	// Создаем граф
-	graph := NewMockGraph()
-	graph.AddVertex(1)
-	graph.AddVertex(2)
-	graph.AddVertex(3)
-	graph.AddVertex(4)
-	graph.AddVertex(5)
+	g := graph.Graph{}
+	g.AddVertex(1)
+	g.AddVertex(2)
+	g.AddVertex(3)
+	g.AddVertex(4)
+	g.AddVertex(5)
 
-	graph.AddEdge(1, 2)
-	graph.AddEdge(1, 3)
-	graph.AddEdge(2, 4)
-	graph.AddEdge(3, 4)
-	graph.AddEdge(4, 5)
+	g.AddEdge(1, 2)
+	g.AddEdge(1, 3)
+	g.AddEdge(2, 4)
+	g.AddEdge(3, 4)
+	g.AddEdge(4, 5)
 
-	bfsGraph := &Graph{graph}
+	bfsGraph := &bfs.Graph{g}
 	res := bfsGraph.BFS(1)
 
-	expected := "Visited 1\nVisited 2\nVisited 3\nVisited 4\nVisited 5\n"
+	expected := "12345"
 	if res != expected {
-		t.Errorf("expected %q, but got %q", expected, res)
+		t.Errorf("expected: %s but got: %s", expected, res)
 	}
 }

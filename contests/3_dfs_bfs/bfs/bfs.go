@@ -7,7 +7,7 @@ import (
 )
 
 type Graph struct {
-	graph.IGraph
+	graph.Graph
 }
 
 func (g *Graph) BFS(startKey int) string {
@@ -27,10 +27,10 @@ func (g *Graph) BFS(startKey int) string {
 		queue.Remove(element)
 
 		if !visited[currentVertex.Key] {
-			res += fmt.Sprintf("Visited %d\n", currentVertex.Key)
+			res += fmt.Sprintf("%d", currentVertex.Key)
 			visited[currentVertex.Key] = true
 
-			for _, v := range currentVertex.Adjacent {
+			for _, v := range currentVertex.Near {
 				if !visited[v.Key] {
 					queue.PushBack(v)
 				}
