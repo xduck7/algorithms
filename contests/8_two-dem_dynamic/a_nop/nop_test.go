@@ -1,7 +1,6 @@
-package nop_test
+package nop
 
 import (
-	"algotithms/contests/8_two-dem_dynamic/nop"
 	"testing"
 )
 
@@ -20,7 +19,7 @@ func TestLCS(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		result := nop.Nop(tt.a, tt.b)
+		result := Nop(tt.a, tt.b)
 		if result != tt.expected {
 			t.Errorf("Nop(%q, %q) = %q; expected %q", tt.a, tt.b, result, tt.expected)
 		}

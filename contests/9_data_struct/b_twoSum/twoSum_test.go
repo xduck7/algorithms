@@ -1,7 +1,6 @@
-package twoSum_test
+package twoSum
 
 import (
-	"algotithms/contests/9_data_struct/twoSum"
 	"testing"
 )
 
@@ -21,7 +20,7 @@ func TestHasTwoSum(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		res := twoSum.TwoSum(tt.a, tt.k)
+		res := TwoSum(tt.a, tt.k)
 		if res != tt.expected {
 			t.Errorf("twoSum(%v, %d) = %v; expected %v", tt.a, tt.k, res, tt.expected)
 		}

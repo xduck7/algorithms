@@ -1,7 +1,6 @@
-package backpack_test
+package backpack
 
 import (
-	"algotithms/contests/8_two-dem_dynamic/backpack"
 	"testing"
 )
 
@@ -42,7 +41,7 @@ func TestBackpack(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		result := backpack.Backpack(tt.n, tt.w, tt.vm, tt.wm)
+		result := Backpack(tt.n, tt.w, tt.vm, tt.wm)
 		if result != tt.expected {
 			t.Errorf("backpack(%d, %d, %v, %v) = %d; expected %d",
 				tt.n, tt.w, tt.vm, tt.wm, result, tt.expected)
