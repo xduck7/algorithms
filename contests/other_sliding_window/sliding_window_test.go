@@ -42,6 +42,7 @@ func TestFindLenOfUniqSubstring(t *testing.T) {
 			if result != tt.expected {
 				t.Errorf("findLenOfUniqSubstring() = %v, want %v", result, tt.expected)
 			}
+			fmt.Printf("Test #%d: OK", idx+1)
 		})
 	}
 }
