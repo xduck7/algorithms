@@ -1,7 +1,6 @@
 package kana
 
 import (
-	"algotithms/contests/4_topology"
 	"fmt"
 	"testing"
 )
