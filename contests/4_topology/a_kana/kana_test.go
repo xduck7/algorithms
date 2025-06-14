@@ -1,7 +1,7 @@
-package kana_test
+package kana
 
 import (
-	"algotithms/contests/4_topology/kana"
+	"algotithms/contests/4_topology"
 	"fmt"
 	"testing"
 )
@@ -62,7 +62,7 @@ func TestKana(t *testing.T) {
 
 	for id, tt := range tests {
 		t.Run(fmt.Sprintf("%d", id), func(t *testing.T) {
-			result := kana.Kana(tt.N, tt.v)
+			result := Kana(tt.N, tt.v)
 
 			if tt.hasCycle {
 				if result != nil {
